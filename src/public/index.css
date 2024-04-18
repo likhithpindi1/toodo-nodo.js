@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html {
+  box-sizing: inherit;
+  font-size: 62.5%;
+}
+body {
+}
+.task-btn {
+  text-align: right;
+  padding: 100px;
+}
+#add-task {
+  font-size: 20px;
+  padding: 20px;
+  background-color: burlywood;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 50px;
+}
+.task-items {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid black;
+}
+#items {
+}
+.adding-task {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.hide {
+  /* visibility: hidden; */
+}

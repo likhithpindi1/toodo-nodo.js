@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="task-btn">
+        <button id="add-task">Add Task</button>
+      </div>
+      <div class="main">
+        <div class="task-items">
+          <h1 id="items">#</h1>
+          <h1 id="items">Task Name</h1>
+          <h1 id="items">Status</h1>
+          <h1 id="items">Edit</h1>
+          <h1 id="items">Remove</h1>
+        </div>
+        <div class="adding-task hide">asl;kdm1</div>
+        <h1><%= student.name %></h1>
+      </div>
+      <script>
+        document.getElementById("add-task").addEventListener("click", () => {
+          const taskName = prompt("Enter task name:");
+          if (taskName) {
+            fetch("/add-task", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ taskName }),
+            })
+              .then((response) => response.text())
+              .then((message) => alert(message))
+              .catch((error) => console.error("Error:", error));
+          }
+        });
+      </script>
+    </header>
+  </body>
+</html>
